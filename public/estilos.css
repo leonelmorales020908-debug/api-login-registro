@@ -1,0 +1,101 @@
+/* ----- Estilos generales de la página ----- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;               /* Centra la tarjeta en la pantalla */
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* ----- Tarjeta del formulario ----- */
+.tarjeta {
+  width: 90%;
+  max-width: 380px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e3c72;
+}
+
+/* ----- Pestañas (Iniciar sesión / Registrarse) ----- */
+.pestanas {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.pestanas button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #e6e9f0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+}
+
+.pestanas button.activa {
+  background: #2a5298;
+  color: #ffffff;
+}
+
+/* ----- Campos del formulario ----- */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2a5298;
+}
+
+/* ----- Botón principal ----- */
+form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2a5298;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #1e3c72;
+}
+
+/* ----- Mensaje de respuesta de la API ----- */
+.mensaje {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  min-height: 20px;
+}
+
+.mensaje.exito { color: #1b8a3a; }  /* Verde: todo salió bien */
+.mensaje.error { color: #c62828; }  /* Rojo: hubo un error */

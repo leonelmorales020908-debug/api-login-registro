@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Codificación de caracteres para que se vean bien las tildes -->
+  <meta charset="UTF-8">
+  <!-- Hace que la página se adapte a celulares -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Servicio Web</title>
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Tarjeta principal del formulario -->
+  <main class="tarjeta">
+    <h1 id="titulo">Iniciar sesión</h1>
+
+    <!-- Botones para cambiar entre iniciar sesión y registrarse -->
+    <div class="pestanas">
+      <button id="btnTabLogin" class="activa" type="button">Iniciar sesión</button>
+      <button id="btnTabRegistro" type="button">Registrarse</button>
+    </div>
+
+    <!-- Formulario: usuario y contraseña -->
+    <form id="formulario">
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" placeholder="Escribe tu usuario" required>
+
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena" placeholder="Escribe tu contraseña" required>
+
+      <!-- El texto de este botón cambia según la pestaña -->
+      <button type="submit" id="btnEnviar">Iniciar sesión</button>
+    </form>
+
+    <!-- Aquí se muestra el mensaje que responde la API -->
+    <p id="mensaje" class="mensaje"></p>
+  </main>
+
+  <!-- Archivo con la lógica que conecta con la API -->
+  <script src="script.js"></script>
+</body>
+</html>

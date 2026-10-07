@@ -22,6 +22,9 @@ const RUTA_DATOS = path.join(__dirname, 'data', 'usuarios.json'); // Archivo don
 // Middleware: permite que el servidor entienda el cuerpo de las peticiones en formato JSON
 app.use(express.json());
 
+// Middleware: sirve los archivos de la carpeta "public" (la interfaz HTML, CSS y JS)
+app.use(express.static(path.join(__dirname, 'public')));
+
 // ---------- 3. FUNCIONES AUXILIARES ----------
 
 /**
